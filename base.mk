@@ -67,10 +67,6 @@ PRODUCT_COPY_FILES += \
     device/phh/treble/nfc/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf \
     device/phh/treble/nfc/libnfc-nci-huawei.conf:system/phh/libnfc-nci-huawei.conf
 
-# LineageOS build may need this to make NFC work
-PRODUCT_PACKAGES += \
-    NfcNci \
-
 PRODUCT_COPY_FILES += \
     device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
     device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
