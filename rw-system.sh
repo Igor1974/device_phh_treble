@@ -809,7 +809,13 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
         [ -n "$v" ] && resetprop_phh ro.build.version.security_patch "$v"
     done
 
+    resetprop_phh ro.build.user nobody
+    resetprop_phh ro.build.host android-build
     resetprop_phh ro.build.tags release-keys
+    resetprop_phh ro.product.build.tags release-keys
+    resetprop_phh ro.system.build.tags release-keys
+    resetprop_phh ro.system_ext.build.tags release-keys
+    resetprop_phh ro.vendor.build.tags release-keys
     resetprop_phh ro.boot.vbmeta.device_state locked
     resetprop_phh ro.boot.verifiedbootstate green
     resetprop_phh ro.boot.flash.locked 1
@@ -819,6 +825,10 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
     resetprop_phh ro.debuggable 0
     resetprop_phh ro.secure 1
     resetprop_phh ro.build.type user
+    resetprop_phh ro.product.build.type user
+    resetprop_phh ro.system.build.type user
+    resetprop_phh ro.system_ext.build.type user
+    resetprop_phh ro.vendor.build.type user
     resetprop_phh --delete ro.build.selinux
 
     resetprop_phh ro.adb.secure 1
