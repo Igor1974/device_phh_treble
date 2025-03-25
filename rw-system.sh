@@ -772,6 +772,11 @@ if getprop ro.vendor.build.fingerprint |grep -q -e /ASUS_I006D:;then
     mount /vendor/etc/audio/ZS590KS/audio_policy_configuration_ZS590KS.xml /vendor/etc/audio/sku_$sku/audio_policy_configuration.xml
 fi
 
+# For G75 5G, fix internet blocks caused by forbidden string "paros" in the user agent
+if getprop ro.vendor.build.fingerprint | grep -iq -e motorola/paros; then
+    resetprop_phh ro.product.vendor.model "moto g75 5G"
+fi
+
 setprop ctl.stop console
 copyprop() {
     p="$(getprop "$2")"
