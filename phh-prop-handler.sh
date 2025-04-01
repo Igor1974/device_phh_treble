@@ -245,8 +245,8 @@ if [ "$1" == "persist.sys.phh.disable_soundvolume_effect" ];then
     fi
 
     if [[ "$prop_value" == 1 ]];then
-        mount /system/phh/empty /vendor/lib/soundfx/libvolumelistener.so
-        mount /system/phh/empty /vendor/lib64/soundfx/libvolumelistener.so
+        mount /mnt/phh/empty /vendor/lib/soundfx/libvolumelistener.so
+        mount /mnt/phh/empty /vendor/lib64/soundfx/libvolumelistener.so
     else
         umount /vendor/lib/soundfx/libvolumelistener.so
         umount /vendor/lib64/soundfx/libvolumelistener.so

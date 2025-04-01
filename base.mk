@@ -73,13 +73,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
+    device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
     device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
     device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \
     device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
-
-PRODUCT_COPY_FILES += \
-    device/phh/treble/empty:system/phh/empty \
-    device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
     treble-environ-rc \
@@ -227,7 +224,7 @@ PRODUCT_PACKAGES += \
     oplus-alert-slider
 
 PRODUCT_COPY_FILES += \
-    device/phh/treble/empty:system/etc/smartpa_params/empty \
+    device/phh/treble/overrides/nothing.txt:system/etc/smartpa_params/empty \
     device/phh/treble/proprietary-files/gome/fs16xx_01s_left.preset.raw:system/phh/gome/fs16xx_01s_left.preset \
     device/phh/treble/proprietary-files/gome/fs16xx_01s_mono.preset.raw:system/phh/gome/fs16xx_01s_mono.preset \
     device/phh/treble/proprietary-files/gome/fs16xx_01s_right.preset.raw:system/phh/gome/fs16xx_01s_right.preset \
