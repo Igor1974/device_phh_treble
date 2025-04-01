@@ -116,34 +116,34 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/interfaces.xml:system/etc/permissions/interfaces.xml
 
 PRODUCT_COPY_FILES += \
-	device/phh/treble/files/samsung-gpio_keys.kl:system/phh/samsung-gpio_keys.kl \
-	device/phh/treble/files/samsung-sec_touchscreen.kl:system/phh/samsung-sec_touchscreen.kl \
-	device/phh/treble/files/samsung-sec_touchkey.kl:system/phh/samsung-sec_touchkey.kl \
-	device/phh/treble/files/oneplus6-synaptics_s3320.kl:system/phh/oneplus6-synaptics_s3320.kl \
-	device/phh/treble/files/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl \
+	device/phh/treble/files/samsung-gpio_keys.kl.raw:system/phh/samsung-gpio_keys.kl \
+	device/phh/treble/files/samsung-sec_touchscreen.kl.raw:system/phh/samsung-sec_touchscreen.kl \
+	device/phh/treble/files/samsung-sec_touchkey.kl.raw:system/phh/samsung-sec_touchkey.kl \
+	device/phh/treble/files/oneplus6-synaptics_s3320.kl.raw:system/phh/oneplus6-synaptics_s3320.kl \
+	device/phh/treble/files/huawei-fingerprint.kl.raw:system/phh/huawei/fingerprint.kl \
+	device/phh/treble/files/samsung-9810-floating_feature.xml:system/phh/sam-9810-flo_feat.xml \
+	device/phh/treble/files/mimix3-gpio-keys.kl.raw:system/phh/mimix3-gpio-keys.kl \
+	device/phh/treble/files/nokia-soc_gpio_keys.kl.raw:system/phh/nokia-soc_gpio_keys.kl \
+	device/phh/treble/files/lenovo-synaptics_dsx.kl.raw:system/phh/lenovo-synaptics_dsx.kl \
+	device/phh/treble/files/oppo-touchpanel.kl.raw:system/phh/oppo-touchpanel.kl \
+	device/phh/treble/files/google-uinput-fpc.kl.raw:system/phh/google-uinput-fpc.kl \
+	device/phh/treble/files/moto-uinput-egis.kl.raw:system/phh/moto-uinput-egis.kl \
+	device/phh/treble/files/daisy-buttonJack.kl.raw:system/phh/daisy-buttonJack.kl \
+	device/phh/treble/files/daisy-uinput-fpc.kl.raw:system/phh/daisy-uinput-fpc.kl \
+	device/phh/treble/files/daisy-uinput-goodix.kl.raw:system/phh/daisy-uinput-goodix.kl \
+	device/phh/treble/files/nubia-nubia_synaptics_dsx.kl.raw:system/phh/nubia-nubia_synaptics_dsx.kl \
+	device/phh/treble/files/nubia-nubia_goodix_ts.kl.raw:system/phh/nubia-nubia_goodix_ts.kl \
+	device/phh/treble/files/unihertz-mtk-kpd.kl.raw:system/phh/unihertz-mtk-kpd.kl \
+	device/phh/treble/files/unihertz-mtk-tpd.kl.raw:system/phh/unihertz-mtk-tpd.kl \
+	device/phh/treble/files/unihertz-mtk-tpd-kpd.kl.raw:system/phh/unihertz-mtk-tpd-kpd.kl \
+	device/phh/treble/files/unihertz-fingerprint_key.kl.raw:system/phh/unihertz-fingerprint_key.kl \
+	device/phh/treble/files/zf6-goodixfp.kl.raw:system/phh/zf6-goodixfp.kl \
+	device/phh/treble/files/zf6-googlekey_input.kl.raw:system/phh/zf6-googlekey_input.kl \
+	device/phh/treble/files/teracube2e-mtk-kpd.kl.raw:system/phh/teracube2e-mtk-kpd.kl \
+	device/phh/treble/files/bv9500plus-mtk-kpd.kl.raw:system/phh/bv9500plus-mtk-kpd.kl \
+	device/phh/treble/files/moto-liber-gpio-keys.kl.raw:system/phh/moto-liber-gpio-keys.kl \
+	device/phh/treble/files/tecno-touchpanel.kl.raw:system/phh/tecno-touchpanel.kl \
 	device/phh/treble/files/samsung-sec_e-pen.idc:system/usr/idc/sec_e-pen.idc \
-	device/phh/treble/files/samsung-9810-floating_feature.xml:system/ph/sam-9810-flo_feat.xml \
-	device/phh/treble/files/mimix3-gpio-keys.kl:system/phh/mimix3-gpio-keys.kl \
-	device/phh/treble/files/nokia-soc_gpio_keys.kl:system/phh/nokia-soc_gpio_keys.kl \
-	device/phh/treble/files/lenovo-synaptics_dsx.kl:system/phh/lenovo-synaptics_dsx.kl \
-	device/phh/treble/files/oppo-touchpanel.kl:system/phh/oppo-touchpanel.kl \
-	device/phh/treble/files/google-uinput-fpc.kl:system/phh/google-uinput-fpc.kl \
-	device/phh/treble/files/moto-uinput-egis.kl:system/phh/moto-uinput-egis.kl \
-	device/phh/treble/files/daisy-buttonJack.kl:system/phh/daisy-buttonJack.kl \
-	device/phh/treble/files/daisy-uinput-fpc.kl:system/phh/daisy-uinput-fpc.kl \
-	device/phh/treble/files/daisy-uinput-goodix.kl:system/phh/daisy-uinput-goodix.kl \
-	device/phh/treble/files/nubia-nubia_synaptics_dsx.kl:system/phh/nubia-nubia_synaptics_dsx.kl \
-	device/phh/treble/files/nubia-nubia_goodix_ts.kl:system/phh/nubia-nubia_goodix_ts.kl \
-	device/phh/treble/files/unihertz-mtk-kpd.kl:system/phh/unihertz-mtk-kpd.kl \
-	device/phh/treble/files/unihertz-mtk-tpd.kl:system/phh/unihertz-mtk-tpd.kl \
-	device/phh/treble/files/unihertz-mtk-tpd-kpd.kl:system/phh/unihertz-mtk-tpd-kpd.kl \
-	device/phh/treble/files/unihertz-fingerprint_key.kl:system/phh/unihertz-fingerprint_key.kl \
-	device/phh/treble/files/zf6-goodixfp.kl:system/phh/zf6-goodixfp.kl \
-	device/phh/treble/files/zf6-googlekey_input.kl:system/phh/zf6-googlekey_input.kl \
-	device/phh/treble/files/teracube2e-mtk-kpd.kl:system/phh/teracube2e-mtk-kpd.kl \
-	device/phh/treble/files/bv9500plus-mtk-kpd.kl:system/phh/bv9500plus-mtk-kpd.kl \
-	device/phh/treble/files/moto-liber-gpio-keys.kl:system/phh/moto-liber-gpio-keys.kl \
-	device/phh/treble/files/tecno-touchpanel.kl:system/phh/tecno-touchpanel.kl \
 	device/phh/treble/files/rosemary-excluded-input-devices.xml:system/phh/rosemary-excluded-input-devices.xml
 
 SELINUX_IGNORE_NEVERALLOWS := true
