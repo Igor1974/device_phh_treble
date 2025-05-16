@@ -96,6 +96,8 @@ PRODUCT_MODEL := TrebleDroid $apps_name
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
+override BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 PRODUCT_PACKAGES += $extra_packages
 
 WITH_ADB_INSECURE := true
