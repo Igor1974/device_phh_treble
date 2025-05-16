@@ -88,6 +88,9 @@ PRODUCT_NAME := $target
 PRODUCT_DEVICE := tdgsi_${arch}_$part
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
+PRODUCT_MANUFACTURER := google
+PRODUCT_SYSTEM_MANUFACTURER := google
+
 PRODUCT_MODEL := TrebleDroid $apps_name
 
 # Overwrite the inherited "emulator" characteristics
@@ -95,6 +98,9 @@ PRODUCT_CHARACTERISTICS := device
 
 PRODUCT_PACKAGES += $extra_packages
 
+WITH_ADB_INSECURE := true
+
+PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
 EOF
 echo -e '\t$(LOCAL_DIR)/'$target.mk '\' >> AndroidProducts.mk
 			done
