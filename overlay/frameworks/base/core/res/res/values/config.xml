@@ -30,12 +30,18 @@
 	<string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
 	<bool name="config_swipe_up_gesture_setting_available">true</bool>
 	<bool name="config_smart_battery_available">true</bool>
-    <dimen name="dialog_corner_radius">28.0dip</dimen>
-    <dimen name="dialog_corner_radius_small">28.0dip</dimen>
-    <dimen name="config_buttonCornerRadius">28.0dip</dimen>
-    <dimen name="config_buttonCornerRadiusSmall">28.0dip</dimen>
-    <dimen name="config_dialogCornerRadius">28.0dip</dimen>
+   <!-- Round UI -->
+    <dimen name="config_dialogCornerRadius">28dp</dimen>
     <dimen name="config_dialogCornerRadiusSmall">28.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">28dp</dimen>
+    <dimen name="config_buttonCornerRadiusSmall">28.0dip</dimen>
+    <dimen name="brightness_mirror_height">48dp</dimen>
+    <dimen name="rounded_slider_corner_radius">28dp</dimen>
+    <dimen name="rounded_slider_height">48dp</dimen>
+    <dimen name="rounded_slider_background_rounded_corner">28dp</dimen>
+    <dimen name="rounded_slider_track_corner_radius">28dp</dimen>
+    <dimen name="notification_corner_radius">28dp</dimen>
+    <dimen name="notification_corner_radius_small">12dp</dimen>
 
 	<bool name="config_cellBroadcastAppLinks">true</bool>
 
