@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+    <bool name="config_autoExpandFirstNotification">false</bool>
+    <bool name="config_hasRecents">true</bool>
+    <bool name="config_windowIsRound">true</bool>
+    <bool name="config_useDefaultFocusHighlight">false</bool>
+    <bool name="custom_lockscreen_shortcuts_enabled">true</bool>
+    <bool name="config_turbulenceNoise">false</bool>
+</resources>
