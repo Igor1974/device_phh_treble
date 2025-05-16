@@ -38,8 +38,6 @@
     <dimen name="rounded_slider_height">48dp</dimen>
     <dimen name="rounded_slider_background_rounded_corner">28dp</dimen>
     <dimen name="rounded_slider_track_corner_radius">28dp</dimen>
-    <dimen name="notification_corner_radius">56.0dip</dimen>
-    <dimen name="notification_corner_radius_small">56.0dip</dimen>
 
 	<bool name="config_cellBroadcastAppLinks">true</bool>
 
