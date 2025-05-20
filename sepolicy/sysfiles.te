@@ -1,0 +1,5 @@
+allow shell sysfs:file { read open };
+allow platform_app sysfs:file { read open getattr };
+allow platform_app sysfs_net:file { read open getattr };
+allow platform_app sysfs_net:dir { read open getattr search };
+allow platform_app sysfs:dir { read open getattr search };
