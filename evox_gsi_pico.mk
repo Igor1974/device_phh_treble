@@ -4,18 +4,18 @@ $(call inherit-product, device/phh/treble/base.mk)
 #include vendor/gapps/arm64/arm64-vendor.mk
 
 
-$(call inherit-product, device/phh/treble/horizon.mk)
+$(call inherit-product, device/phh/treble/evox.mk)
 #include vendor/pixel-framework/config.mk
 #include vendor/google/pixel/config.mk
 
-PRODUCT_NAME := horizon_arm64_bgN_pico
+PRODUCT_NAME := evox_gsi_core
 PRODUCT_DEVICE := tdgsi_arm64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
 PRODUCT_MANUFACTURER := google
 PRODUCT_SYSTEM_MANUFACTURER := google
 
-PRODUCT_MODEL := Horizon Treble
+PRODUCT_MODEL := Evolution-X Treble
 
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
@@ -23,11 +23,16 @@ PRODUCT_CHARACTERISTICS := device
 PRODUCT_PACKAGES +=
 
 WITH_ADB_INSECURE := true
-
-# Gapps flags
 WITH_GMS := true
-WITH_GMS_VARIANT := pico
+TARGET_USES_PICO_GAPPS := true
 
+WITH_SU := false
+EVO_BUILD_TYPE := Unofficial
+BUILD_BCR := true
+TARGET_DISABLE_EPPE := true
+TARGET_SUPPORT_BOOT_ANIMATIONS := true
+
+TARGET_HAS_UDFPS := true
 
 
 #remove makupgoogle
