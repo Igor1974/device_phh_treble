@@ -10,4 +10,5 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/horizon_arm64_bvN.mk \
 	$(LOCAL_DIR)/projectpixelage_gsi.mk \
 	$(LOCAL_DIR)/witaqua_gsi.mk \
+	$(LOCAL_DIR)/crdroid_gsi.mk \
 
