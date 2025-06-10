@@ -5,7 +5,7 @@ $(call inherit-product, device/phh/treble/base.mk)
 
 $(call inherit-product, device/phh/treble/axion.mk)
 
-PRODUCT_NAME := axion_arm64_bgN
+PRODUCT_NAME := axion_gsi_vanilla
 PRODUCT_DEVICE := tdgsi_arm64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
@@ -17,9 +17,10 @@ PRODUCT_MODEL := Axion Treble
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
-PRODUCT_PACKAGES +=
+PRODUCT_PACKAGES += 
 
 WITH_ADB_INSECURE := true
 
 PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
-WITH_GAPPS := true
+
+WITH_GAPPS := false
