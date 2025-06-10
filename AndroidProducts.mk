@@ -11,4 +11,7 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/projectpixelage_gsi.mk \
 	$(LOCAL_DIR)/witaqua_gsi.mk \
 	$(LOCAL_DIR)/crdroid_gsi.mk \
+	$(LOCAL_DIR)/evox_gsi_pico.mk \
+	$(LOCAL_DIR)/evox_gsi_full.mk \
+	$(LOCAL_DIR)/evox_gsi_mini.mk \
 

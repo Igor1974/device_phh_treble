@@ -2,7 +2,7 @@ TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 #include vendor/gapps/arm64/arm64-vendor.mk
-
+include vendor/gms/gms_full.mk
 
 $(call inherit-product, device/phh/treble/evox.mk)
 #include vendor/pixel-framework/config.mk
