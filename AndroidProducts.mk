@@ -14,4 +14,5 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/evox_gsi_pico.mk \
 	$(LOCAL_DIR)/evox_gsi_full.mk \
 	$(LOCAL_DIR)/evox_gsi_mini.mk \
+	$(LOCAL_DIR)/genesis_gsi.mk \
 
