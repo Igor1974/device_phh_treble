@@ -15,4 +15,6 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/evox_gsi_full.mk \
 	$(LOCAL_DIR)/evox_gsi_mini.mk \
 	$(LOCAL_DIR)/genesis_gsi.mk \
+	$(LOCAL_DIR)/matrixx_gsi_vanilla.mk \
+	$(LOCAL_DIR)/matrixx_gsi_gapps.mk \
 
