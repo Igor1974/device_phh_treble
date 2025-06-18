@@ -32,7 +32,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # 1 - vanilla (default)
 # 2 - microg
 # 3 - gapps
-TARGET_BUILD_PACKAGE := 3
+
 
 # Launcher
 TARGET_INCLUDE_LAWNCHAIR := false
