@@ -2,9 +2,9 @@ TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 # include vendor/gapps/arm64/arm64-vendor.mk
-include vendor/google/overlays/ThemeIcons/config.mk
-include vendor/pixel-style/config/common.mk
-include vendor/gms/gms_pico.mk
+# include vendor/google/overlays/ThemeIcons/config.mk
+# include vendor/pixel-style/config/common.mk
+# include vendor/gms/gms_pico.mk
 
 $(call inherit-product, device/phh/treble/voltage.mk)
 #include vendor/pixel-framework/config.mk
