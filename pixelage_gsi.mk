@@ -8,7 +8,7 @@ $(call inherit-product, device/phh/treble/pixelage.mk)
 #include vendor/pixel-framework/config.mk
 #include vendor/google/pixel/config.mk
 
-PRODUCT_NAME := projectpixelage_gsi
+PRODUCT_NAME := pixelage_gsi
 PRODUCT_DEVICE := tdgsi_arm64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google

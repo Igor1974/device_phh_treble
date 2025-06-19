@@ -39,6 +39,6 @@ TARGET_SUPPORTS_WALLEFFECT := true
 
 # To Add Bypass Charging Support (need to be adapted in DT and KT as well)
 
-
+PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
 
 #remove makupgoogle
