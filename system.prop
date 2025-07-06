@@ -49,6 +49,3 @@ bluetooth.profile.sap.server.enabled?=true
 
 # Samsung vendors default to a Samsung-specific gadget for MTP. Set this to use AOSP's functionfs MTP
 vendor.usb.use_ffs_mtp=1
-
-
-#ro.droidx.maintainer= name
