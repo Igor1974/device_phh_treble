@@ -338,7 +338,7 @@ if [ "$1" == "persist.sys.phh.sim_count" ];then
     if [[ "$prop_value" != "reset" && "$prop_value" != "dsds" && "$prop_value" != "dsda" && "$prop_value" != "tsts" ]]; then
         exit 1
     fi
-    
+
     if [[ "$prop_value" == reset ]];then
         resetprop_phh -p --delete persist.radio.multisim.config
         resetprop_phh -p --delete persist.vendor.radio.multisim.config

@@ -67,13 +67,9 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/nfc/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf \
 	device/phh/treble/nfc/libnfc-nci-huawei.conf:system/phh/libnfc-nci-huawei.conf
 
-# LineageOS build may need this to make NFC work
-PRODUCT_PACKAGES += \
-        NfcNci \
-
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
-    device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
+        device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
 	device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
 	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \
 	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
@@ -87,7 +83,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	bootctl \
-	vintf \
+	vintf
 
 
 PRODUCT_COPY_FILES += \
@@ -178,7 +174,7 @@ PRODUCT_PACKAGES += \
 	resetprop_phh
 
 PRODUCT_COPY_FILES += \
-    device/phh/treble/phh-securize.sh:system/bin/phh-securize.sh \
+        device/phh/treble/phh-securize.sh:system/bin/phh-securize.sh \
 	device/phh/treble/files/ota.sh:system/bin/ota.sh \
 
 PRODUCT_COPY_FILES += \
@@ -230,7 +226,7 @@ PRODUCT_PACKAGES += \
 	oplus-alert-slider
 
 PRODUCT_COPY_FILES += \
-	device/phh/treble/empty:system/etc/smartpa_params/empty \
+	device/phh/treble/overrides/nothing.txt:system/etc/smartpa_params/empty \
 	device/phh/treble/proprietary-files/gome/fs16xx_01s_left.preset:system/phh/gome/fs16xx_01s_left.preset \
 	device/phh/treble/proprietary-files/gome/fs16xx_01s_mono.preset:system/phh/gome/fs16xx_01s_mono.preset \
 	device/phh/treble/proprietary-files/gome/fs16xx_01s_right.preset:system/phh/gome/fs16xx_01s_right.preset \
