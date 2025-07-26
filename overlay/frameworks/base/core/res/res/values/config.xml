@@ -64,6 +64,8 @@
 
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
+	<integer name="config_num_physical_slots">2</integer>
+
     <string-array name="config_packagesExemptFromSuspension" translatable="false">
 	    <item>me.phh.treble.app</item>
     </string-array>
