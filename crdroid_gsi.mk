@@ -1,10 +1,12 @@
 TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
+#include vendor/gapps/arm64/arm64-vendor.mk
 
-# $(call inherit-product. vendor/gapps/arm64/arm64-vendor.mk)
 
 $(call inherit-product, device/phh/treble/crdroid.mk)
+#include vendor/pixel-framework/config.mk
+#include vendor/google/pixel/config.mk
 
 PRODUCT_NAME := crdroid_gsi
 PRODUCT_DEVICE := tdgsi_arm64_ab
@@ -15,8 +17,15 @@ PRODUCT_SYSTEM_MANUFACTURER := google
 
 PRODUCT_MODEL := crDroid Treble
 
+# Overwrite the inherited "emulator" characteristics
+PRODUCT_CHARACTERISTICS := device
 
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SCREEN_WIDTH := 720
+PRODUCT_PACKAGES +=
+
 WITH_ADB_INSECURE := true
-TARGET_DISABLE_EPPE := true
+
+PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
+
+
+
+#remove makupgoogle

@@ -5,21 +5,25 @@ $(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
 $(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
 -include vendor/lineage/build/core/config.mk
 
-# Kernel
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
-TARGET_NO_KERNEL_IMAGE := true
 TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_NO_KERNEL_IMAGE := true
 
-# SELinux
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+LOCAL_UNINSTALLABLE_MODULE := true
+
 SELINUX_IGNORE_NEVERALLOWS := true
-TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
 
-# Product
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-PRODUCT_CHARACTERISTICS := device
-TARGET_PRODUCT_PROP += device/phh/treble/product.prop
+override BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-# APN
-PRODUCT_PACKAGES += apns-conf.xml
+TARGET_BOOT_ANIMATION_RES := 720
 
-PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
+
+# Maintainer username
+HORIZON_MAINTAINER := papacu
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Other flags
+TARGET_INCLUDE_MATLOG := true
+TARGET_PREBUILT_BCR := true

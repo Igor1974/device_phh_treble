@@ -2,6 +2,7 @@ TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 
+
 $(call inherit-product, device/phh/treble/infinity.mk)
 
 PRODUCT_NAME := infinity_gsi
@@ -13,13 +14,12 @@ PRODUCT_SYSTEM_MANUFACTURER := google
 
 PRODUCT_MODEL := Infinity X Treble
 
+# Overwrite the inherited "emulator" characteristics
+PRODUCT_CHARACTERISTICS := device
 
+PRODUCT_PACKAGES +=
 
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SCREEN_WIDTH := 720
-TARGET_SUPPORTS_BLUR := true
-USE_MOTO_CALCULATOR := true
+WITH_ADB_INSECURE := true
 
-INFINITY_MAINTAINER := Doze-off
-INFINITY_BUILD_TYPE := OFFICIAL
-WITH_GAPPS := true
+PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
+
