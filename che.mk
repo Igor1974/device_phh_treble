@@ -1,9 +1,9 @@
-$(call inherit-product, vendor/lineage/config/common.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-$(call inherit-product, vendor/lineage/config/BoardConfigSoong.mk)
-$(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
-$(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
--include vendor/lineage/build/core/config.mk
+$(call inherit-product, vendor/cherish/config/common.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/BoardConfigSoong.mk)
+$(call inherit-product, vendor/cherish/config/BoardConfigCherish.mk)
+$(call inherit-product, device/cherish/sepolicy/common/sepolicy.mk)
+-include vendor/cherish/build/core/config.mk
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
@@ -23,3 +23,6 @@ TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 PRODUCT_PACKAGES += apns-conf.xml
 
 PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
+
+
+

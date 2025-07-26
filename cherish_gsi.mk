@@ -2,17 +2,22 @@ TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 
-$(call inherit-product, device/phh/treble/lessaosp.mk)
+# $(call inherit-product. vendor/gapps/arm64/arm64-vendor.mk)
 
-PRODUCT_NAME := lessaosp_gsi
+$(call inherit-product, device/phh/treble/che.mk)
+
+PRODUCT_NAME := crdroid_gsi
 PRODUCT_DEVICE := tdgsi_arm64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
 PRODUCT_MANUFACTURER := google
 PRODUCT_SYSTEM_MANUFACTURER := google
 
-PRODUCT_MODEL := LessAOSP Treble
+PRODUCT_MODEL := CherishOS Treble
+
 
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SCREEN_WIDTH := 720
-TARGET_SUPPORTS_BLUR := true
+WITH_ADB_INSECURE := true
+TARGET_DISABLE_EPPE := true
+CHERISH_MAINTAINER := Doze-off

@@ -22,4 +22,8 @@ TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 # APN
 PRODUCT_PACKAGES += apns-conf.xml
 
+
 PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
+
+
+

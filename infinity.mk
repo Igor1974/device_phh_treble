@@ -1,26 +1,25 @@
 $(call inherit-product, vendor/infinity/config/common.mk)
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 $(call inherit-product, vendor/infinity/config/BoardConfigSoong.mk)
-$(call inherit-product, vendor/infinity/config/BoardConfigInfinity.mk)
+$(call inherit-product, vendor/infinity/config/BoardConfigLineage.mk)
 $(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
 -include vendor/infinity/build/core/config.mk
 
-TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_NO_KERNEL_IMAGE := true
-
+# Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
-LOCAL_UNINSTALLABLE_MODULE := true
+TARGET_NO_KERNEL_IMAGE := true
+TARGET_NO_KERNEL_OVERRIDE := true
 
+# SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
 
+# Product
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+PRODUCT_CHARACTERISTICS := device
+TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 
-override BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+# APN
+PRODUCT_PACKAGES += apns-conf.xml
 
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_BLUR := false
-USE_MOTO_CALCULATOR := false
-TARGET_SHIPS_FULL_GAPPS := false
-
-INFINITY_MAINTAINER := Doze-off
-INFINITY_BUILD_TYPE := OFFICIAL
-WITH_GAPPS := true
+PRODUCT_EXTRA_VNDK_VERSIONS += 28 29

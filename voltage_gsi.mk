@@ -19,16 +19,5 @@ PRODUCT_SYSTEM_MANUFACTURER := google
 
 PRODUCT_MODEL := VoltageOS Treble
 
-# Overwrite the inherited "emulator" characteristics
-PRODUCT_CHARACTERISTICS := device
-
-PRODUCT_PACKAGES +=
-
-WITH_ADB_INSECURE := true
-
-PRODUCT_EXTRA_VNDK_VERSIONS += 28 29
-
-
-
-
-#remove makupgoogle
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_SCREEN_WIDTH := 720
