@@ -381,7 +381,7 @@ mount -t tmpfs -o rw,nodev,relatime,mode=755,gid=0 none /mnt/phh || true
 mkdir /mnt/phh/empty_dir
 touch /mnt/phh/empty
 touch /mnt/phh/unreadable
-chmod 0 /mnt/phh/unreadableAdd commentMore actions
+chmod 0 /mnt/phh/unreadable
 if [ "$vndk" -le 29 ]; then
     mount /mnt/phh/unreadable /vendor/etc/seccomp_policy/configstore@1.1.policy
 fi
@@ -846,6 +846,7 @@ if [ ! -f /metadata/securize_disable ]; then
     copyprop ro.product.product.manufacturer ro.product.vendor.manufacturer
     copyprop ro.product.system_ext.manufacturer ro.product.vendor.manufacturer
 fi
+
 
 for abi in "" 64;do
     f=/vendor/lib$abi/libstagefright_foundation.so

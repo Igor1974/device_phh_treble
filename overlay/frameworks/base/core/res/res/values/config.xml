@@ -62,6 +62,8 @@
 	<bool name="skip_restoring_network_selection">true</bool>
 	<bool name="config_enableMultipleAdmins">true</bool>
 
+	<integer name="config_num_physical_slots">2</integer>
+
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
     <string-array name="config_packagesExemptFromSuspension" translatable="false">
