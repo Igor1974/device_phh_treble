@@ -293,21 +293,24 @@ if [ "$1" == "persist.bluetooth.system_audio_hal.enabled" ]; then
     exit
 fi
 
-if [ "$1" == "persist.sys.phh.two_pane_layout" ];then
+if [ "$1" == "persist.sys.phh.debuggable" ];then
     if [[ "$prop_value" != "false" && "$prop_value" != "true" ]]; then
         exit 1
     fi
 
-    if [[ "$prop_value" == false ]];then
-        mount /system/phh/empty /system/system_ext/framework/androidx.window.extensions.jar
-        mount /system/phh/empty /system/system_ext/framework/androidx.window.sidecar.jar
-        resetprop_phh persist.wm.extensions.enabled false
-        resetprop_phh persist.settings.large_screen_opt.enabled false
+    if [[ "$prop_value" == true ]];then
+        resetprop_phh ro.debuggable 1
+        resetprop_phh ro.adb.secure 0
+        resetprop_phh ro.secure 0
+        resetprop_phh ro.force.debuggable 1
+        settings put global adb_enabled 1
     else
-        umount /system/system_ext/framework/androidx.window.extensions.jar
-        umount /system/system_ext/framework/androidx.window.sidecar.jar
-        resetprop_phh persist.wm.extensions.enabled true
-        resetprop_phh persist.settings.large_screen_opt.enabled true
+        resetprop_phh ro.debuggable 0
+        resetprop_phh ro.adb.secure 1
+        resetprop_phh ro.secure 1
+        resetprop_phh ro.force.debuggable 0
+        settings put global adb_enabled 0
+        setprop ctl.stop adbd
     fi
     exit
 fi
