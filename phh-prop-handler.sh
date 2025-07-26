@@ -130,6 +130,17 @@ if [ "$1" == "persist.sys.phh.oppo.usbotg" ]; then
     exit
 fi
 
+if [ "$1" == "persist.sys.phh.securize" ]; then
+    if [[ "$prop_value" != "0" && "$prop_value" != "1" ]]; then
+        exit 1
+    fi
+    if [[ "$prop_value" == 1 ]]; then
+        rm -f /metadata/securize_disable
+    else
+        touch /metadata/securize_disable
+    fi
+fi
+
 if [ "$1" == "persist.sys.phh.transsion.usbotg" ]; then
     if [[ "$prop_value" != "0" && "$prop_value" != "1" ]]; then
         exit 1
@@ -245,8 +256,8 @@ if [ "$1" == "persist.sys.phh.disable_soundvolume_effect" ];then
     fi
 
     if [[ "$prop_value" == 1 ]];then
-        mount /system/phh/empty /vendor/lib/soundfx/libvolumelistener.so
-        mount /system/phh/empty /vendor/lib64/soundfx/libvolumelistener.so
+        mount /mnt/phh/empty /vendor/lib/soundfx/libvolumelistener.so
+        mount /mnt/phh/empty /vendor/lib64/soundfx/libvolumelistener.so
     else
         umount /vendor/lib/soundfx/libvolumelistener.so
         umount /vendor/lib64/soundfx/libvolumelistener.so
@@ -274,41 +285,11 @@ if [ "$1" == "persist.bluetooth.system_audio_hal.enabled" ]; then
         setprop persist.bluetooth.a2dp_offload.disabled true
         resetprop_phh ro.bluetooth.a2dp_offload.supported false
     else
-        resetprop_phh -p --delete persist.bluetooth.bluetooth_audio_hal.disabled
-        resetprop_phh -p --delete persist.bluetooth.a2dp_offload.disabled
-        resetprop_phh ro.bluetooth.a2dp_offload.supported
+        resetprop_phh --delete persist.bluetooth.bluetooth_audio_hal.disabled
+        resetprop_phh --delete persist.bluetooth.a2dp_offload.disabled
+        resetprop_phh --delete ro.bluetooth.a2dp_offload.supported
     fi
     restartAudio
-    exit
-fi
-
-if [ "$1" == "persist.sys.phh.two_pane_layout" ];then
-    if [[ "$prop_value" != "false" && "$prop_value" != "true" ]]; then
-        exit 1
-    fi
-
-    if [[ "$prop_value" == false ]];then
-        mount /system/phh/empty /system/system_ext/framework/androidx.window.extensions.jar
-        mount /system/phh/empty /system/system_ext/framework/androidx.window.sidecar.jar
-        resetprop_phh persist.wm.extensions.enabled false
-        resetprop_phh persist.settings.large_screen_opt.enabled false
-    else
-        umount /system/system_ext/framework/androidx.window.extensions.jar
-        umount /system/system_ext/framework/androidx.window.sidecar.jar
-        resetprop_phh persist.wm.extensions.enabled true
-        resetprop_phh persist.settings.large_screen_opt.enabled true
-    fi
-    exit
-fi
-
-if [ "$1" == "persist.sys.spoof.auto_update" ];then
-    if [[ "$prop_value" != "false" && "$prop_value" != "true" ]]; then
-        exit 1
-    fi
-
-    if [[ "$prop_value" == true ]];then
-        curl -s https://raw.githubusercontent.com/ChonDoit/device_phh_treble/14/spoof_props.sh | sh
-    fi
     exit
 fi
 
