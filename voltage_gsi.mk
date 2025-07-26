@@ -1,14 +1,9 @@
 TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
-# include vendor/gapps/arm64/arm64-vendor.mk
-# include vendor/google/overlays/ThemeIcons/config.mk
-# include vendor/pixel-style/config/common.mk
-# include vendor/gms/gms_pico.mk
+
 
 $(call inherit-product, device/phh/treble/voltage.mk)
-#include vendor/pixel-framework/config.mk
-#include vendor/google/pixel/config.mk
 
 PRODUCT_NAME := voltage_gsi
 PRODUCT_DEVICE := tdgsi_arm64_ab
@@ -18,6 +13,8 @@ PRODUCT_MANUFACTURER := google
 PRODUCT_SYSTEM_MANUFACTURER := google
 
 PRODUCT_MODEL := VoltageOS Treble
+
+TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device

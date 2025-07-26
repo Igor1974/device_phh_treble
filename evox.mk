@@ -17,10 +17,6 @@ override BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_BOOT_ANIMATION_RES := 720
 
-
-# Maintainer username
-HORIZON_MAINTAINER := papacu
-
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 

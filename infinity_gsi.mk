@@ -14,6 +14,8 @@ PRODUCT_SYSTEM_MANUFACTURER := google
 
 PRODUCT_MODEL := Infinity X Treble
 
+TARGET_PRODUCT_PROP += device/phh/treble/product.prop
+
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
