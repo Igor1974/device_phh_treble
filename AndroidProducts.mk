@@ -2,8 +2,7 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/infinity_gsi.mk \
 	$(LOCAL_DIR)/derpfest_gsi.mk \
 	$(LOCAL_DIR)/witaqua_gsi.mk \
-	$(LOCAL_DIR)/axion_gapps_gsi.mk \
-	$(LOCAL_DIR)/axion_vanilla_gsi.mk \
+	$(LOCAL_DIR)/axion_gsi.mk \
 	$(LOCAL_DIR)/pixelage_gsi.mk \
 	$(LOCAL_DIR)/crdroid_gsi.mk \
 	$(LOCAL_DIR)/evox_full_gsi.mk \
