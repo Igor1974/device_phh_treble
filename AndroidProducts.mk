@@ -5,12 +5,11 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/axion_gsi.mk \
 	$(LOCAL_DIR)/pixelage_gsi.mk \
 	$(LOCAL_DIR)/crdroid_gsi.mk \
-	$(LOCAL_DIR)/evox_full_gsi.mk \
-	$(LOCAL_DIR)/evox_mini_gsi.mk \
-	$(LOCAL_DIR)/evox_pico_gsi.mk \
+	$(LOCAL_DIR)/evox_gsi.mk \
 	$(LOCAL_DIR)/genesis_gsi.mk \
 	$(LOCAL_DIR)/voltage_gsi.mk \
 	$(LOCAL_DIR)/lessaosp_gsi.mk \
 	$(LOCAL_DIR)/yaap_gsi.mk \
+	$(LOCAL_DIR)/rising_gsi.mk \
 
 

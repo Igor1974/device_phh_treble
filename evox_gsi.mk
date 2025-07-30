@@ -1,12 +1,12 @@
 TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
-#include vendor/gapps/arm64/arm64-vendor.mk
-include vendor/gms/gms_pico.mk
+
 
 $(call inherit-product, device/phh/treble/evox.mk)
-#include vendor/pixel-framework/config.mk
-#include vendor/google/pixel/config.mk
+$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
+#$(call inherit-product, vendor/pixel-framework/config.mk)
+$(call inherit-product, vendor/pixel-style/config/common.mk)
 
 PRODUCT_NAME := evox_gsi
 PRODUCT_DEVICE := tdgsi_arm64_ab
@@ -27,12 +27,12 @@ PRODUCT_PACKAGES +=
 PRODUCT_PACKAGES += apns-conf.xml
 
 WITH_ADB_INSECURE := true
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
+WITH_GMS := false
+TARGET_USES_PICO_GAPPS := false
 
 WITH_SU := false
 EVO_BUILD_TYPE := Unofficial
-BUILD_BCR := true
+BUILD_BCR := false
 TARGET_DISABLE_EPPE := true
 TARGET_SUPPORT_BOOT_ANIMATIONS := true
 
