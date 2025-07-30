@@ -2,7 +2,7 @@ TARGET_GAPPS_ARCH := arm64
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 #include vendor/gapps/arm64/arm64-vendor.mk
-include vendor/gms/gms_pico.mk
+# include vendor/gms/gms_pico.mk
 
 $(call inherit-product, device/phh/treble/clove.mk)
 #include vendor/pixel-framework/config.mk
@@ -23,6 +23,8 @@ TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 PRODUCT_CHARACTERISTICS := device
 
 PRODUCT_PACKAGES +=
+
+PRODUCT_PACKAGES += apns-conf.xml
 
 WITH_ADB_INSECURE := true
 WITH_GMS := true

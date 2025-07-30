@@ -24,6 +24,8 @@ PRODUCT_CHARACTERISTICS := device
 
 PRODUCT_PACKAGES +=
 
+PRODUCT_PACKAGES += apns-conf.xml
+
 WITH_ADB_INSECURE := true
 WITH_GMS := true
 
