@@ -1,9 +1,9 @@
-$(call inherit-product, vendor/clover/config/common.mk)
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
-$(call inherit-product, vendor/clover/config/BoardConfigSoong.mk)
-$(call inherit-product, vendor/clover/config/BoardConfigClover.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/BoardConfigSoong.mk)
+$(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
 $(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
--include vendor/clover/build/core/config.mk
+-include vendor/lineage/build/core/config.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_NO_KERNEL_IMAGE := true
