@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_depth_blur_radius">0</integer>
+    <dimen name="max_depth_blur_radius_enhanced">0dp</dimen>
+
+    <!-- The max scale for the wallpaper when it's zoomed in -->
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">
+        @*android:dimen/config_wallpaperMaxScale
+    </item>
+</resources>

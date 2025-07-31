@@ -23,6 +23,10 @@
     <dimen name="rounded_slider_background_rounded_corner">28dp</dimen>
     <dimen name="rounded_slider_track_corner_radius">28dp</dimen>
 
+
+	<item name="config_wallpaperMaxScale" format="float" type="dimen">0.1</item>
+
+
 	<bool name="config_cellBroadcastAppLinks">true</bool>
 
     <array name="config_availableColorModes">
