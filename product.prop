@@ -1,7 +1,3 @@
-
-# Allow overriding kernel version
-ro.bpf.kver_override=5.4.186
-
 #PERFORMANCE
 # Memory optimize
 persist.vendor.sys.memplus.enable=true
