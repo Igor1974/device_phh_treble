@@ -383,3 +383,16 @@ if [ "$1" == "persist.sys.phh.restricted_networking" ];then
     fi
     exit
 fi
+
+
+if [ "$1" == "windowsmgr.max_events_per_sec" ]; then
+    case "$prop_value" in
+        60|90|120|144)
+            setprop windowsmgr.max_events_per_sec "$prop_value"
+            ;;
+        *)
+            exit 1
+            ;;
+    esac
+    exit
+fi

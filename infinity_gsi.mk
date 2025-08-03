@@ -16,6 +16,10 @@ PRODUCT_MODEL := Infinity X Treble
 
 TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 
+# OTA
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.system.ota.json_url=https://raw.githubusercontent.com/Doze-off/ProjectInfinity-X_gsi/16/ota.json
+
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
