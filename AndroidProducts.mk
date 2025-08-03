@@ -11,5 +11,6 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/lessaosp_gsi.mk \
 	$(LOCAL_DIR)/yaap_gsi.mk \
 	$(LOCAL_DIR)/rising_gsi.mk \
+	$(LOCAL_DIR)/everest_gsi.mk \
 
 
