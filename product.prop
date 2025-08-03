@@ -19,11 +19,10 @@ ro.lmk.use_minfree_levels=false
 ro.lmk.kill_heaviest_task=false
 ro.lmk.downgrade_pressure=100
 
-
-# blur support
-persist.sys.sf.native_mode=2
-
 #blur active
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=0
 ro.launcher.blur.appLaunch=0
+
+# Enable Material Design 3 Expressive
+is_expressive_design_enabled=true
