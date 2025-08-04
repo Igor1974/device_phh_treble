@@ -26,3 +26,5 @@ ro.launcher.blur.appLaunch=0
 
 # Enable Material Design 3 Expressive
 is_expressive_design_enabled=true
+
+windowsmgr.max_events_per_sec=90
