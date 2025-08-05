@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 
 		fprintf(stderr, "Unmapping backing image returned %s\n", imgManager->UnmapImageDevice(imageName) ? "true" : "false");
 		fprintf(stderr, "Deleting backing image returned %s\n", imgManager->DeleteBackingImage(imageName) ? "true" : "false");
-		auto backRes = imgManager->CreateBackingImage(imageName, 8*1024*1024*1024LL, IImageManager::CREATE_IMAGE_DEFAULT, nullptr);
+		auto backRes = imgManager->CreateBackingImage(imageName, 4*1024*1024*1024LL, IImageManager::CREATE_IMAGE_DEFAULT, nullptr);
 		if(backRes.is_ok()) {
 			fprintf(stderr, "Creating system image succeeded\n");
 		} else {
