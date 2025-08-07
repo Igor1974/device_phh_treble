@@ -28,3 +28,7 @@ ro.launcher.blur.appLaunch=0
 is_expressive_design_enabled=true
 
 windowsmgr.max_events_per_sec=165
+
+
+# Allow overriding kernel version
+ro.bpf.kver_override=5.4.186
