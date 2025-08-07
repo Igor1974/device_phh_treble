@@ -3,12 +3,16 @@ include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 #include vendor/gapps/arm64/arm64-vendor.mk
 
+WITH_GMS := true
+
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
 $(call inherit-product, device/phh/treble/derp.mk)
 #include vendor/pixel-framework/config.mk
 #include vendor/google/pixel/config.mk
 
-PRODUCT_NAME := derpfest_gsi
+PRODUCT_NAME := derpfest_gsi_gapps
 PRODUCT_DEVICE := tdgsi_arm64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
@@ -26,9 +30,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
-PRODUCT_PACKAGES +=
+PRODUCT_PACKAGES += Camera2
 
-PRODUCT_PACKAGES += apns-conf.xml
+# PRODUCT_PACKAGES += apns-conf.xml
 
 WITH_ADB_INSECURE := true
 

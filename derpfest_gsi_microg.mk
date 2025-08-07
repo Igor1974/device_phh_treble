@@ -26,7 +26,7 @@ TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
 
-PRODUCT_PACKAGES +=
+PRODUCT_PACKAGES += Camera2
 
 PRODUCT_PACKAGES += apns-conf.xml
 

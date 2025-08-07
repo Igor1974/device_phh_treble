@@ -2,7 +2,8 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/infinity_gsi_gapps.mk \
 	$(LOCAL_DIR)/infinity_gsi_mcirog.mk \
 	$(LOCAL_DIR)/infinity_gsi_vanilla.mk \
-	$(LOCAL_DIR)/derpfest_gsi.mk \
+	$(LOCAL_DIR)/derpfest_gsi_gapps.mk \
+	$(LOCAL_DIR)/derpfest_gsi_microg.mk \
 	$(LOCAL_DIR)/witaqua_gsi.mk \
 	$(LOCAL_DIR)/axion_gsi.mk \
 	$(LOCAL_DIR)/pixelage_gsi.mk \
