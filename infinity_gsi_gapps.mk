@@ -12,7 +12,7 @@ PRODUCT_SYSTEM_BRAND := google
 PRODUCT_MANUFACTURER := google
 PRODUCT_SYSTEM_MANUFACTURER := google
 
-PRODUCT_MODEL := Infinity X Treble
+PRODUCT_MODEL := Infinity X GSI
 
 TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 
@@ -22,10 +22,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Overwrite the inherited "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
-
-PRODUCT_PACKAGES +=
-
-PRODUCT_PACKAGES += apns-conf.xml
 
 WITH_ADB_INSECURE := true
 
