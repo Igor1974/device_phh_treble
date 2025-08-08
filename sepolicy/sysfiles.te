@@ -4,8 +4,11 @@ allow platform_app sysfs_net:file { read open getattr };
 allow platform_app sysfs_net:dir { read open getattr search };
 allow platform_app sysfs:dir { read open getattr search };
 
-# F+ T800 / MT8788: Allow access to /sys/class/mm for MediaTek HAL
-# Fixes: avc: denied { search } for name="mm"
+# MTK UNIVERSAL FIX: Allow access to /sys/class/mm
+# For: mediaserver, audioserver, cameraserver, mtk_hal_*, vndk_detect, vold, netd, zygote, etc.
+# This is required for stable boot on MT8788-based tablets.
+# Designed for universal GSI compatibility and media use cases.
+
 type sysfs_mm, fs_type, file_type;
 
 # Media and system services
@@ -36,3 +39,10 @@ allow system_server system_file:dir map;
 
 # Fix zygote read access to vendor props
 allow zygote vendor_default_prop:file read;
+
+# Universal access for all init-spawned services and media domains
+allow init domain:dir search;
+allow init domain:file { read open };
+
+allow mediaserver sysfs_mm:dir search;
+allow mediaserver sysfs_mm:file { read open };
