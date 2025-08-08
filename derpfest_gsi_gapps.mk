@@ -4,6 +4,7 @@ $(call inherit-product, device/phh/treble/base.mk)
 
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 $(call inherit-product, device/phh/treble/derp.mk)
 
