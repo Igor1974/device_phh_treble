@@ -3,3 +3,36 @@ allow platform_app sysfs:file { read open getattr };
 allow platform_app sysfs_net:file { read open getattr };
 allow platform_app sysfs_net:dir { read open getattr search };
 allow platform_app sysfs:dir { read open getattr search };
+
+# F+ T800 / MT8788: Allow access to /sys/class/mm for MediaTek HAL
+# Fixes: avc: denied { search } for name="mm"
+type sysfs_mm, fs_type, file_type;
+
+# Media and system services
+allow mediaserver sysfs_mm:dir search;
+allow mediaserver sysfs_mm:file { read open };
+
+# ART and app optimization
+allow artd sysfs_mm:dir search;
+allow dex2oat sysfs_mm:dir search;
+allow preloads_copy sysfs_mm:dir search;
+allow cppreopts sysfs_mm:dir search;
+allow extra_free_kbytes sysfs_mm:dir search;
+
+# System utilities
+allow idmap sysfs_mm:dir search;
+allow incidentd sysfs_mm:dir search;
+allow netd sysfs_mm:dir search;
+allow zygote sysfs_mm:dir search;
+
+# Fix system_suspend access to sysfs
+allow system_suspend sysfs:file read;
+allow system_suspend sysfs_batteryinfo:file read;
+allow system_suspend sysfs_rtc:file read;
+allow system_suspend sysfs_wakeup:dir search;
+
+# Fix system_server map access
+allow system_server system_file:dir map;
+
+# Fix zygote read access to vendor props
+allow zygote vendor_default_prop:file read;
