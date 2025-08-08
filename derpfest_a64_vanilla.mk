@@ -1,13 +1,13 @@
-TARGET_GAPPS_ARCH := arm64
-include build/make/target/product/aosp_arm64.mk
+TARGET_GAPPS_ARCH := arm
+include build/make/target/product/aosp_arm.mk
 $(call inherit-product, device/phh/treble/base.mk)
 
-$(call inherit-product-if-exists, vendor/microg/microg.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
 $(call inherit-product, device/phh/treble/derp.mk)
 
-PRODUCT_NAME := derpfest_gsi_microg
-PRODUCT_DEVICE := tdgsi_arm64_ab
+PRODUCT_NAME := derpfest_a64_vanilla
+PRODUCT_DEVICE := tdgsi_a64_ab
 PRODUCT_BRAND := google
 PRODUCT_SYSTEM_BRAND := google
 PRODUCT_MANUFACTURER := google
