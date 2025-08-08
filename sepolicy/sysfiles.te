@@ -46,3 +46,6 @@ allow init domain:file { read open };
 
 allow mediaserver sysfs_mm:dir search;
 allow mediaserver sysfs_mm:file { read open };
+
+# Universal access for all init-spawned services
+init_daemon_domain(sysfs_mm)
