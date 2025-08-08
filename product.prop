@@ -27,7 +27,7 @@ ro.launcher.blur.appLaunch=0
 # Enable Material Design 3 Expressive
 is_expressive_design_enabled=true
 
-windowsmgr.max_events_per_sec=165
+windowsmgr.max_events_per_sec=240
 ro.max.fling_velocity=10000
 
 # Allow overriding kernel version
