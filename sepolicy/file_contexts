@@ -19,3 +19,7 @@
 
 /dev/smcinvoke u:object_r:smcinvoke_device:s0
 /system/bin/hw/android\.hardware\.bluetooth\.audio-service-system u:object_r:hal_audio_sysbta_exec:s0
+
+
+/sys/devices/platform/.*/mm(/.*)?        u:object_r:sysfs_mm:s0
+/sys/devices/platform/.*/mm_exec(/.*)?   u:object_r:sysfs_mm_exec:s0
