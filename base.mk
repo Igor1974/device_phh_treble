@@ -256,9 +256,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     treble-overlay-samsung-hover-proximity \
     treble-overlay-samsung-physical-proximity \
-    treble-overlay-samsung-touch-proximity \
-    SimSingleResCommon \
-    SimDualResCommon
+    treble-overlay-samsung-touch-proximity
 
 # Two-pane layout in Settings
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
