@@ -10,6 +10,8 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/witaqua_a64_vanilla.mk \
 	$(LOCAL_DIR)/axion_gsi.mk \
 	$(LOCAL_DIR)/pixelage_gsi.mk \
+	$(LOCAL_DIR)/lunaris_gsi.mk \
+	$(LOCAL_DIR)/cherish_gsi.mk \
 	$(LOCAL_DIR)/crdroid_gsi.mk \
 	$(LOCAL_DIR)/evox_gsi.mk \
 	$(LOCAL_DIR)/genesis_gsi.mk \
