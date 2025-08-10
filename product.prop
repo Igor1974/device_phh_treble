@@ -27,8 +27,13 @@ ro.launcher.blur.appLaunch=0
 # Enable Material Design 3 Expressive
 is_expressive_design_enabled=true
 
+# touch improve
 windowsmgr.max_events_per_sec=240
 ro.max.fling_velocity=10000
+ro.input.highres_time=1
+touch.pressure.scale=0.001
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=1920
 
 # Allow overriding kernel version
 ro.bpf.kver_override=5.4.186
