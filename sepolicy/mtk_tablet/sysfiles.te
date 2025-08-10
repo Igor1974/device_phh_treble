@@ -1,0 +1,9 @@
+# MTK Tablet: Universal access to /sys/class/mm
+# Required for: mediaserver, vold, netd, vndk_detect, aconfigd, wmt_loader, incidentd, etc.
+type sysfs_mm, fs_type, file_type;
+
+# Grant access to all init-spawned services
+init_daemon_domain(sysfs_mm)
+
+# Fix system_server map access (common in GSI)
+allow system_server system_file:dir map;

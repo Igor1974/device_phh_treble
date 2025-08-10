@@ -1,0 +1,2 @@
+# MTK Tablet: Access to /sys/class/mm
+/sys/class/mm(/.*)?    u:object_r:sysfs_mm:s0
