@@ -30,13 +30,14 @@
 ---
 
 ### 1. Добавь репозиторий в `roomservice.xml`
-
+```bash
 mkdir -p .repo/local_manifests
-cat > .repo/local_manifests/roomservice.xml
+cat > .repo/local_manifests/roomservice.xml <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="Igor1974/device_phh_treble" path="device/phh/treble" remote="github" />
 </manifest>
+EOF
 
     
 ## Синхронизируй исходники    
