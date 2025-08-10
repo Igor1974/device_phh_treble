@@ -32,7 +32,7 @@
 ### 1. Добавь репозиторий в `roomservice.xml`
 
 mkdir -p .repo/local_manifests
-cat > .repo/local_manifests/roomservice.xml <<EOF
+cat > .repo/local_manifests/roomservice.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="Igor1974/device_phh_treble" path="device/phh/treble" remote="github" />
