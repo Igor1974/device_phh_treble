@@ -1,8 +1,7 @@
 # MTK Tablet Fix Kit: Universal fix for MediaTek-based tablets (MT8788, MT8768, MT8167, etc.)
 # Devices: F+ T800, Lenovo TB-87xx, Alldocube iPlay, and others
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, device/phh/treble/base.mk)
 
 # Fixes: ubsan: sub-overflow in libmedia_codeclist_capabilities.so
 PRODUCT_COPY_FILES += \
