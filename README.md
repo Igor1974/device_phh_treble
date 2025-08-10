@@ -29,7 +29,7 @@
 
 ---
 
-### 1. Добавь репозиторий в `roomservice.xml`
+### Добавь репозиторий в `roomservice.xml`
 ```bash
 mkdir -p .repo/local_manifests
 cat > .repo/local_manifests/roomservice.xml <<EOF
