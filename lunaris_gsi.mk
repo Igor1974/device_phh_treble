@@ -11,7 +11,7 @@ PRODUCT_SYSTEM_BRAND := google
 PRODUCT_MANUFACTURER := google
 PRODUCT_SYSTEM_MANUFACTURER := google
 
-PRODUCT_MODEL := WitAqua GSI
+PRODUCT_MODEL := Lunaris GSI
 
 TARGET_PRODUCT_PROP += device/phh/treble/product.prop
 
